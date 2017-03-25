@@ -1,10 +1,8 @@
 [submodule "mysql-5.6"]
 	path = mysql-5.6
-	url = git@github.com:facebook/mysql-5.6.git
+	url = https://github.com/facebook/mysql-5.6.git
 [submodule "rocksdb"]
 	path = rocksdb
-	url = git@github.com:Terark/rocksdb.git
+	url = https://github.com/Terark/rocksdb.git
 
-[submodule "terark-zip-rocksdb"]
-	path = terark-zip-rocksdb
-	url = git@github.com:terark/terark-zip-rocksdb.git
+
