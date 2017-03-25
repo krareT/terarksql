@@ -1,8 +1,0 @@
-[submodule "mysql-5.6"]
-	path = mysql-5.6
-	url = https://github.com/facebook/mysql-5.6.git
-[submodule "rocksdb"]
-	path = rocksdb
-	url = https://github.com/Terark/rocksdb.git
-
-
