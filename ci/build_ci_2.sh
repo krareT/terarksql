@@ -1,5 +1,7 @@
 #!/bin/sh
 
+BASE=/ci_build
+
 cd mysql-5.6/build
 # make && install
 echo "start make && install..."
