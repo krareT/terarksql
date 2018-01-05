@@ -1,8 +1,5 @@
 #!/bin/sh
 
-::<<EOF
-
-
 set -x
 set -e
 
@@ -53,4 +50,3 @@ cmake .. \
 echo "-- cmake done"
 
 
-EOF

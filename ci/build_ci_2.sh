@@ -1,8 +1,5 @@
 #!/bin/sh
 
-::<<EOF
-
-
 BASE=/ci_build
 
 cd mysql-5.6/build
@@ -23,5 +20,3 @@ sh -x $BASE/mysql-package/init.sh prepare /oldssd1/ci/mysql-data
 sh -x $BASE/mysql-package/init.sh init
 echo "-- init done"
 
-
-EOF
