@@ -31,7 +31,7 @@ btype=MinSizeRel
 btype=RelWithDebInfo
 #btype=Debug
 cmake .. \
- -DCMAKE_VERBOSE_MAKEFILE=ON \
+ -DCMAKE_VERBOSE_MAKEFILE=OFF \
  -DCMAKE_SKIP_BUILD_RPATH=ON \
  -DCMAKE_SKIP_INSTALL_RPATH=ON \
  -DCMAKE_BUILD_TYPE=$btype \

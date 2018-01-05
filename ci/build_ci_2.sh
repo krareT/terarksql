@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd mysql-5.6/build
 # make && install
 echo "start make && install..."
 make -j32
