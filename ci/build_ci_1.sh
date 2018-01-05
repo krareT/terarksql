@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 set -x
 set -e
 
@@ -48,3 +49,5 @@ cmake .. \
  -DENABLE_DTRACE=0 \
  -DCMAKE_INSTALL_PREFIX=__MYSQL_INSTALL_DIR__
 echo "-- cmake done"
+
+
