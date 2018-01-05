@@ -8,7 +8,7 @@ BASE=/ci_build
 # set rocksdb
 cd mysql-5.6
 if [ ! -d rocksdb ]; then
-    ln -s $BASE/rocksdb ./rocksdb
+    ln -s $BASE/rocksdb rocksdb
 fi
 
 # set core pkg
