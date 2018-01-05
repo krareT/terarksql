@@ -1,6 +1,7 @@
 
 stages:
-  - build
+#  - build
+  - test
 
 cmake:
   stage: build
@@ -16,6 +17,14 @@ make_install:
     - sh ci/build_ci_2.sh
   only:
     - feature/ci
+
+make_install:
+  stage: test
+  script:
+    - sh ci/test_ci.sh
+  only:
+    - feature/ci
+
 
 #    - rm -rf /ci_build/terark-core/*
 #    - cp -r pkg/* /ci_build/terark-core/
