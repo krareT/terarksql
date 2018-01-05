@@ -1,0 +1,16 @@
+
+stages:
+  - build
+
+build_and_install:
+  stage: build
+  script:
+    - git submodule update --init --recursive
+#    - sh build_for_ci.sh
+#    - rm -rf /ci_build/terark-core/*
+#    - cp -r pkg/* /ci_build/terark-core/
+#    - cp -r src /ci_build/terark-core/
+#    - rm -rf /ci_build/terark-core/src/**/*.cpp
+#    - rm -rf /ci_build/terark-core/src/**/*.cc
+  only:
+    - feature/ci
