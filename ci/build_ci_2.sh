@@ -4,9 +4,6 @@ cd mysql-5.6/build
 # make && install
 echo "start make && install..."
 make -j32
-#rm -rf __MYSQL_INSTALL_DIR__
-#rm -rf packageRoot
-#rm -rf databaseDir
 make install -j8
 sh -x ../post-make-install.sh
 echo "-- make done"
@@ -14,12 +11,10 @@ echo "-- make done"
 # mv package to ci_build
 rm -rf $BASE/mysql-package
 rm -rf $BASE/mysql-data
-
-#rm -rf packageRoot
-#mv __MYSQL_INSTALL_DIR__ packageRoot
-
-#sh -x packageRoot/init.sh prepare databaseDir
-#sh -x packageRoot/init.sh init
-
-#echo "-- install done"
+# init
+echo "start init..."
+mv __MYSQL_INSTALL_DIR__ $BASE/mysql-package
+sh -x $BASE/mysql-package/init.sh prepare $BASE/mysql-data
+sh -x $BASE/mysql-package/init.sh init
+echo "-- init done"
 
