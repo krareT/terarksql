@@ -32,8 +32,8 @@ ln -s $PKG terark-zip-rocksdb-pkg
 
 btype=MinSizeRel
 #btype=Release
-btype=RelWithDebInfo
-#btype=Debug
+#btype=RelWithDebInfo
+btype=Debug
 cmake .. \
  -DCMAKE_VERBOSE_MAKEFILE=OFF \
  -DCMAKE_SKIP_BUILD_RPATH=ON \
