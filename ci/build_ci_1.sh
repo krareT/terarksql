@@ -2,7 +2,6 @@
 
 set -x
 set -e
-
 BASE=/ci_build
 
 # set rocksdb
