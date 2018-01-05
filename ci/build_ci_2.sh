@@ -1,5 +1,7 @@
 #!/bin/sh
 
+::<<EOF
+
 
 BASE=/ci_build
 
@@ -22,3 +24,4 @@ sh -x $BASE/mysql-package/init.sh init
 echo "-- init done"
 
 
+EOF

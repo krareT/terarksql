@@ -1,6 +1,6 @@
 
 stages:
-#  - build
+  - build
   - test
 
 cmake:
@@ -18,7 +18,7 @@ make_install:
   only:
     - feature/ci
 
-make_install:
+test:
   stage: test
   script:
     - sh ci/test_ci.sh
