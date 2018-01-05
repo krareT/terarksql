@@ -5,7 +5,7 @@ stages:
 cmake:
   stage: build
   script:
-    - git submodule update --init --recursive
+#   - git submodule update --init --recursive
     - sh ci/build_ci_1.sh
   only:
     - feature/ci
