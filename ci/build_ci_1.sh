@@ -23,12 +23,12 @@ cp -r $BASE/terark-core/terark-fsa_all-Linux-x86_64-g++-4.8-bmi2-0/lib/*.a $PKG/
 echo "start cmake..."
 
 # TBD: for test, temp comment out
-#rm -rf build
-#mkdir build
+rm -rf build
+mkdir build
 cd build
 
 # TBD: for test
-#ln -s $PKG terark-zip-rocksdb-pkg
+ln -s $PKG terark-zip-rocksdb-pkg
 
 btype=MinSizeRel
 #btype=Release
