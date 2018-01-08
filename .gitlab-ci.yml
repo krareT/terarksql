@@ -3,12 +3,18 @@ stages:
   - build
   - test
 
-cmake:
+cmake-dev:
   stage: build
   script:
 #   - git submodule update --init --recursive
     - sh ci/build_ci_1.sh debug
-#    - sh ci/build_ci_dummy.sh
+  only:
+    - dev
+
+cmake-master:
+  stage: build
+  script:
+    - sh ci/build_ci_1.sh
   only:
     - master
 
@@ -16,8 +22,8 @@ make_install:
   stage: build
   script:
     - sh ci/build_ci_2.sh
-#    - sh ci/build_ci_dummy.sh
   only:
+    - dev
     - master
 
 test:
@@ -25,7 +31,7 @@ test:
   script:
     - sh ci/test_ci.sh
   only:
-    - master
+    - dev
 
 
 #    - rm -rf /ci_build/terark-core/*
