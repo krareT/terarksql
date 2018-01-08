@@ -20,19 +20,22 @@ cp -r $BASE/terark-core/terark-fsa_all-Linux-x86_64-g++-4.8-bmi2-0/lib/*.a $PKG/
 
 # cmake within build/
 echo "start cmake..."
-
-# TBD: for test, temp comment out
-rm -rf build
-mkdir build
+if [ -d build ]; then
+    rm -rf build
+    mkdir build
+fi
 cd build
 
-# TBD: for test
+
 ln -s $PKG terark-zip-rocksdb-pkg
 
-btype=MinSizeRel
+#btype=MinSizeRel
 #btype=Release
-#btype=RelWithDebInfo
-btype=Debug
+btype=RelWithDebInfo
+if [ "$1" = "debug" ]; then
+    btype=Debug
+fi
+
 cmake .. \
  -DCMAKE_VERBOSE_MAKEFILE=OFF \
  -DCMAKE_SKIP_BUILD_RPATH=ON \
