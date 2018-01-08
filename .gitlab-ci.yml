@@ -10,7 +10,7 @@ cmake:
     - sh ci/build_ci_1.sh
 #    - sh ci/build_ci_dummy.sh
   only:
-    - feature/ci
+    - master
 
 make_install:
   stage: build
@@ -18,14 +18,14 @@ make_install:
     - sh ci/build_ci_2.sh
 #    - sh ci/build_ci_dummy.sh
   only:
-    - feature/ci
+    - master
 
 test:
   stage: test
   script:
     - sh ci/test_ci.sh
   only:
-    - feature/ci
+    - master
 
 
 #    - rm -rf /ci_build/terark-core/*
