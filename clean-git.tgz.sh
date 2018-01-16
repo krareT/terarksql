@@ -2,7 +2,7 @@
 set -e
 set -x
 
-base=~/osc
+base=$PWD
 rm -rf clean-git
 mkdir clean-git
 cd $base/clean-git
@@ -28,3 +28,8 @@ ln -s ../rocksdb .
 cd $base/clean-git/snappy
 git checkout .
 sh autogen.sh
+
+cp $base/mysql-on-terarkdb/clean-git*.sh clean-git.sh
+
+tar czf clean-git.tgz clean-git
+
