@@ -29,7 +29,7 @@ cd $base/clean-git/snappy
 git checkout .
 sh autogen.sh
 
-cp $base/mysql-on-terarkdb/clean-git*.sh clean-git.sh
+cp $base/mysql-on-terarkdb/clean-git*.sh clean-git/
 
 tar czf clean-git.tgz clean-git
 
