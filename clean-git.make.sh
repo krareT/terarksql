@@ -2,7 +2,7 @@
 set -e
 set -x
 
-base=~/osc
+base=$PWD
 
 cd $base/clean-git/snappy
 git checkout .
@@ -33,5 +33,5 @@ git checkout fb-mysql-5.6.35.r2017.q4.terark .
 rm -rf rocksdb
 ln -s ../rocksdb .
 mkdir -p build && cd build
-sh ../run-cmake.sh
+sh -x ../run-cmake.sh
 make -j32
