@@ -2,9 +2,9 @@
 set -e
 set -x
 
-base=$PWD
+base=$PWD/clean-git
 
-cd $base/clean-git/snappy
+cd $base/snappy
 git checkout .
 ./configure \
 	--prefix=$PWD/package-dir \
@@ -15,20 +15,20 @@ git checkout .
 make -j8
 make install
 
-cd $base/clean-git/rocksdb
+cd $base/rocksdb
 git checkout 5.9.fb.myrocks.terark.dev .
 
-cd $base/clean-git/terark
+cd $base/terark
 git checkout .
-make pkg -j32 PKG_WITH_DBG=1 PKG_WITH_STATIC=1
+make pkg -j32 PKG_WITH_DBG=1 PKG_WITH_STATIC=1 PKG_WITH_EXE=0 BOOST_INC=-I$base/boost-pkg
 
-cd $base/clean-git/terark-zip-rocksdb
+cd $base/terark-zip-rocksdb
 git checkout .
-make pkg -j32 PKG_WITH_DBG=1 PKG_WITH_STATIC=1
+make pkg -j32 PKG_WITH_DBG=1 PKG_WITH_STATIC=1 PKG_WITH_EXE=0 BOOST_INC=-I$base/boost-pkg
 
-#cd $base/clean-git/tbb
+#cd $base/tbb
 
-cd $base/clean-git/mysql-5.6
+cd $base/mysql-5.6
 git checkout fb-mysql-5.6.35.r2017.q4.terark .
 rm -rf rocksdb
 ln -s ../rocksdb .

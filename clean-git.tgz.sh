@@ -7,6 +7,7 @@ rm -rf clean-git
 mkdir clean-git
 cd $base/clean-git
 mkdir -p mysql-5.6 terark/3rdparty terark-zip-rocksdb snappy rocksdb
+mkdir -p boost-pkg/boost
 
 cp -r $base/terark/.git             $base/clean-git/terark/
 cp -r $base/terark/3rdparty/xxHash  $base/clean-git/terark/3rdparty/
@@ -14,6 +15,7 @@ cp -r $base/terark/3rdparty/base64  $base/clean-git/terark/3rdparty/
 cp -r $base/terark-zip-rocksdb/.git $base/clean-git/terark-zip-rocksdb/
 cp -r $base/snappy/.git             $base/clean-git/snappy/
 cp -r $base/rocksdb/.git            $base/clean-git/rocksdb/
+cp -r $base/boost-pkg/boost/*       $base/clean-git/boost-pkg/boost
 cp -r $base/mysql-on-terarkdb/.git/modules/mysql-5.6  $base/clean-git/mysql-5.6/.git
 sed -i "/worktree/d"                                  $base/clean-git/mysql-5.6/.git/config
 
