@@ -5,7 +5,6 @@ set -x
 base=$PWD/clean-git
 
 cd $base/snappy
-git checkout .
 ./configure \
 	--prefix=$PWD/package-dir \
 	--enable-shared=no \

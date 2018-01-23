@@ -28,7 +28,7 @@ ln -s ../rocksdb .
 #mv tbb-2018_U1 tbb
 
 cd $base/clean-git/snappy
-git checkout .
+git checkout 1.1.3 .
 sh autogen.sh
 
 cd $base
