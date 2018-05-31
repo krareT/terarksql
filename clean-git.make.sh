@@ -15,7 +15,7 @@ make -j8
 make install
 
 cd $base/rocksdb
-git checkout 5.9.fb.myrocks.terark.dev .
+git checkout 5.9.fb.myrocks.terark .
 
 cd $base/terark
 git checkout .
