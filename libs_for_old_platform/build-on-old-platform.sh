@@ -18,7 +18,7 @@ if [ "$1" == "cmake" ]; then
 	/ssd/terark/cmake-2.8/bin/cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DWITH_SSL=system \
 	-DWITH_ZLIB=$ZLIB_DIR/lib -DMYSQL_MAINTAINER_MODE=0 \
 	-DENABLED_LOCAL_INFILE=1 -DENABLE_DTRACE=0 \
-	-DCMAKE_INSTALL_PREFIX=/ssd/terark/mysql-on-terarkdb \
+	-DCMAKE_INSTALL_PREFIX=/ssd/terark/terarksql \
 	-DCMAKE_C_COMPILER=$GCC_DIR/bin/gcc \
 	-DCMAKE_CXX_COMPILER=$GCC_DIR/bin/g++ \
 	-DMYSQL_GITHASH=empty \
