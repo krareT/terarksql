@@ -34,5 +34,5 @@ sh autogen.sh
 cd $base
 cp $base/mysql-on-terarkdb/clean-git*.sh $base/clean-git/
 
-tar czf clean-git.tgz clean-git
+#tar czf clean-git.tgz clean-git
 
